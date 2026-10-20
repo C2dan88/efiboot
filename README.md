@@ -23,14 +23,19 @@ sudo apt install efibootmgr policykit-1
 
 ## Download and run
 
-Download or clone this project, then open a terminal in the `efi` directory (the directory containing `app.py`). Create and activate a virtual environment, install the Python dependency, and start the app:
+Clone the repository, then create the virtual environment and install the dependency:
 
 ```bash
 git clone https://github.com/C2dan88/efiboot.git
 cd efiboot
-python3 -m venv .venv && source .venv/bin/activate
-python -m pip install -r requirements.txt
-python app.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+For later launches, run this from the directory containing `efiboot`:
+
+```bash
+cd efiboot && .venv/bin/python app.py
 ```
 
 ## Using the app
